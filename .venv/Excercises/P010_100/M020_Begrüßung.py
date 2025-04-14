@@ -42,7 +42,7 @@ class Greeter():
 
         return res
 
-    def greet2(self, hour :int):
+    def greet2(self, hour :int) -> str:
         night = hour < 4 or hour > 22
         morning = not night and hour < 11
         daytime = not morning and hour < 15
