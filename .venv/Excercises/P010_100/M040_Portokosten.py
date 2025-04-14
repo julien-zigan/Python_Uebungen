@@ -17,25 +17,31 @@ Am Ende sollen der Bestellwert, die Portokosten
 und der Gesamtbetrag ausgegeben werden.
 """
 
+from random import uniform
+
+
 class ShippingCostCalculator:
+    def __init__(self):
+        self.bstw = "Bestellwert"
+        self.prto = "Portokosten"
+        self.gsmt = "Gesamtbetrag"
+
     def calculate(self, price :float) -> float:
-        sc = 0
-        if price < 100:
-            sc = 1.99
-            if price < 70:
+        sc = 1.99 if price < 100 else 0
+        if price < 70:
                 sc += 1
                 if price < 40:
                     sc +=1
-        return sc;
+        return sc
 
     def cost_info(self, price :float):
         sc = self.calculate(price)
         info = "{:<15}{:>6.2f}€"
-        for s in [["Bestellwert", price], ["Portokosten", sc],
-                    ["Gesamtbetrag", price + sc]]:
+        for s in [[self.bstw, price], [self.prto, sc], [self.gsmt, price + sc]]:
             print(info.format(s[0], s[1]))
+
 
 if __name__ == '__main__':
     calculator = ShippingCostCalculator()
-    calculator.cost_info(56)
+    calculator.cost_info(uniform(1, 130))
 
