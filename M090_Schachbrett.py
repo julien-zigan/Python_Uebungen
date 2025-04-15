@@ -14,3 +14,8 @@ A3 B3 C3 D3 E3 F3 G3 H3
 A2 B2 C2 D2 E2 F2 G2 H2
 A1 B1 C1 D1 E1 F1 G1 H1
 """
+
+for i in range(8):
+    for j in range(8):
+        print(chr(65+j), 8 - i, " ", sep="", end="")
+    print()
