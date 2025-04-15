@@ -17,3 +17,14 @@
 #  Beschäftigte mit einer Betriebszugehörigkeit von mehr als 10 Jahren
 #  erhalten 2 zusätzliche Tage Urlaub.
 
+def vacation_entitlement(age :int, seniority :int, challenged=False):
+    ve = 26
+    if age < 18:
+        ve += 4
+    if age > 55:
+        ve += 2
+    if challenged:
+        ve += 5
+    if seniority > 10:
+        ve += 2
+    return ve

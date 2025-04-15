@@ -22,4 +22,4 @@ def german_lotto_probability() -> float:
 
 
 if __name__ == '__main__':
-    print("Gewinnchancen bei 6 aus 49: {0:.9f} %".format(german_lotto_probability()))
+    print("Gewinnchancen bei 6 aus 49: {0:.9f} ".format(german_lotto_probability()))
