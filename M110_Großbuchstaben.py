@@ -13,5 +13,12 @@ XA XB XC XD XE XF XG XH XI XJ XK XL XM XN XO XP XQ XR XS XT XU XV XW XX XY XZ
 YA YB YC YD YE YF YG YH YI YJ YK YL YM YN YO YP YQ YR YS YT YU YV YW YX YY YZ
 ZA ZB ZC ZD ZE ZF ZG ZH ZI ZJ ZK ZL ZM ZN ZO ZP ZQ ZR ZS ZT ZU ZV ZW ZX ZY ZZ
 """
+def print_all_combinations_of_letters():
+    alphas = 26
+    for i in range(alphas):
+        for j in range(alphas):
+            print(chr(65+i), chr(65 + j), " ", sep="", end="")
+        print()
 
-
+if __name__ == '__main__':
+    print_all_combinations_of_letters()

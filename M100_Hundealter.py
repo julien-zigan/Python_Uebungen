@@ -21,6 +21,7 @@ def man_2_dog_years(years :int) -> int:
             years += 3
     return years
 
+
 if __name__ == '__main__':
     man_years = int(input("Geben Sie das Alter Ihres Hundes in Menschenjahren ein: "))
     print("Das macht", man_2_dog_years(man_years), "Hundejahre!")
